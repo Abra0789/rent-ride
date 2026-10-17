@@ -1,0 +1,128 @@
+[
+  {
+    "id": "axio",
+    "name": "Toyota Axio",
+    "type": "Sedan",
+    "seats": 5,
+    "transmission": "Automatic",
+    "fuel": "Hybrid",
+    "pricePerDay": 3200
+  },
+  {
+    "id": "allion",
+    "name": "Toyota Allion",
+    "type": "Sedan",
+    "seats": 5,
+    "transmission": "Automatic",
+    "fuel": "Petrol",
+    "pricePerDay": 3600
+  },
+  {
+    "id": "premio",
+    "name": "Toyota Premio",
+    "type": "Sedan",
+    "seats": 5,
+    "transmission": "Automatic",
+    "fuel": "Petrol",
+    "pricePerDay": 4100
+  },
+  {
+    "id": "sylphy",
+    "name": "Nissan Sylphy",
+    "type": "Sedan",
+    "seats": 5,
+    "transmission": "Manual",
+    "fuel": "Petrol",
+    "pricePerDay": 2800
+  },
+  {
+    "id": "fit",
+    "name": "Honda Fit",
+    "type": "Hatchback",
+    "seats": 5,
+    "transmission": "Automatic",
+    "fuel": "Hybrid",
+    "pricePerDay": 2600
+  },
+  {
+    "id": "swift",
+    "name": "Suzuki Swift",
+    "type": "Hatchback",
+    "seats": 5,
+    "transmission": "Manual",
+    "fuel": "Petrol",
+    "pricePerDay": 2300
+  },
+  {
+    "id": "aqua",
+    "name": "Toyota Aqua",
+    "type": "Hatchback",
+    "seats": 5,
+    "transmission": "Automatic",
+    "fuel": "Hybrid",
+    "pricePerDay": 2900
+  },
+  {
+    "id": "vezel",
+    "name": "Honda Vezel",
+    "type": "SUV",
+    "seats": 5,
+    "transmission": "Automatic",
+    "fuel": "Hybrid",
+    "pricePerDay": 5200
+  },
+  {
+    "id": "xtrail",
+    "name": "Nissan X-Trail",
+    "type": "SUV",
+    "seats": 7,
+    "transmission": "Automatic",
+    "fuel": "Petrol",
+    "pricePerDay": 5800
+  },
+  {
+    "id": "tucson",
+    "name": "Hyundai Tucson",
+    "type": "SUV",
+    "seats": 5,
+    "transmission": "Automatic",
+    "fuel": "Diesel",
+    "pricePerDay": 6000
+  },
+  {
+    "id": "noah",
+    "name": "Toyota Noah",
+    "type": "Microbus",
+    "seats": 8,
+    "transmission": "Automatic",
+    "fuel": "Hybrid",
+    "pricePerDay": 6500
+  },
+  {
+    "id": "hiace",
+    "name": "Toyota Hiace",
+    "type": "Microbus",
+    "seats": 12,
+    "transmission": "Manual",
+    "fuel": "Diesel",
+    "pricePerDay": 7500
+  },
+  {
+    "id": "bmw5",
+    "name": "BMW 5 Series",
+    "type": "Luxury",
+    "seats": 5,
+    "transmission": "Automatic",
+    "fuel": "Petrol",
+    "pricePerDay": 12000
+  },
+  {
+    "id": "eclass",
+    "name": "Mercedes E Class",
+    "type": "Luxury",
+    "seats": 5,
+    "transmission": "Automatic",
+    "fuel": "Petrol",
+    "pricePerDay": 12500
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "q": "How do I rent a vehicle for ride sharing?",
+    "a": "Pick a car from our fleet, send your licence details and confirm the booking. Our team verifies your documents and hands over the keys."
+  },
+  {
+    "id": 2,
+    "q": "Can I rent for a short period or long term?",
+    "a": "Both work. You can book from a single day up to several months, and longer plans get a lower daily rate."
+  },
+  {
+    "id": 3,
+    "q": "Is insurance included with the rental?",
+    "a": "Insurance is an add on. Switch the insurance toggle on while booking and the cost is added to your total."
+  },
+  {
+    "id": 4,
+    "q": "What is the minimum age to rent a car?",
+    "a": "Drivers must be at least 21 years old and must hold a valid licence for at least one year."
+  },
+  {
+    "id": 5,
+    "q": "Can I extend my rental period if needed?",
+    "a": "Yes. Contact support before your return date and we will extend the booking if the car is free."
+  }
+]

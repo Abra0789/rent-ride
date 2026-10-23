@@ -6,12 +6,15 @@ interface CarCardProps {
 
 function CarCard({ car }: CarCardProps) {
   return (
-    <article>
+    <article className="car-card">
+      <span className="car-type">{car.type}</span>
       <h3>{car.name}</h3>
-      <p>
-        {car.seats} Seats, {car.transmission}, {car.fuel}
+      <p className="car-meta">
+        {car.seats} Seats · {car.transmission} · {car.fuel}
       </p>
-      <p>৳{car.pricePerDay} per day</p>
+      <p className="car-price">
+        ৳{car.pricePerDay} <small>/ day</small>
+      </p>
     </article>
   );
 }

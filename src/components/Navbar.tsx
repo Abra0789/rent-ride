@@ -6,7 +6,9 @@ function Navbar() {
 
   return (
     <header className="navbar">
-      <h2>RentRide</h2>
+      <h2 className="brand">
+        Rent<span>Ride</span>
+      </h2>
       <nav>
         <ul>
           <li>
@@ -15,7 +17,7 @@ function Navbar() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/fleet">Fleet</NavLink>
+            <NavLink to="/fleet">Our Fleet</NavLink>
           </li>
           <li>
             <NavLink to="/faq">FAQ</NavLink>

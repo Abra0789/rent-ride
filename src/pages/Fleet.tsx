@@ -1,13 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useCars } from "../api/hooks";
-import CarCard from "../components/CarCard";
+import FilterBar from "../components/FilterBar";
+import CarList from "../components/CarList";
 
 function Fleet() {
   const { data: cars = [], isLoading, isError } = useCars();
   const [selectedType, setSelectedType] = useState("All");
 
-  const types = ["All", ...new Set(cars.map((car) => car.type))];
+  useEffect(() => {
+    const previousTitle = document.title;
+    document.title = "Fleet | RentRide";
 
+    return () => {
+      document.title = previousTitle;
+    };
+  }, []);
+
+  const types = ["All", ...new Set(cars.map((car) => car.type))];
   const visibleCars =
     selectedType === "All"
       ? cars
@@ -19,24 +28,15 @@ function Fleet() {
   return (
     <section>
       <h1>Our Fleet</h1>
-
-      <div>
-        {types.map((type) => (
-          <button key={type} onClick={() => setSelectedType(type)}>
-            {type}
-          </button>
-        ))}
-      </div>
-
+      <FilterBar
+        types={types}
+        selectedType={selectedType}
+        onSelect={setSelectedType}
+      />
       <p>
         Showing: {selectedType} ({visibleCars.length} cars)
       </p>
-
-      <div>
-        {visibleCars.map((car) => (
-          <CarCard key={car.id} car={car} />
-        ))}
-      </div>
+      <CarList cars={visibleCars} />
     </section>
   );
 }

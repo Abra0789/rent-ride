@@ -1,5 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import type { Car } from "../types";
+import { useAppDispatch } from "../store/hooks";
+import { selectCar } from "../store/bookingSlice";
 
 interface CarCardProps {
   car: Car;
@@ -15,6 +18,9 @@ function toSlug(text: string) {
 }
 
 function CarCard({ car }: CarCardProps) {
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+
   const sources = [
     `/images/cars/${toSlug(car.name)}.jpg`,
     `/images/cars/${toSlug(car.type)}.jpg`,
@@ -24,6 +30,11 @@ function CarCard({ car }: CarCardProps) {
 
   const handleError = () => {
     setIndex((prev) => Math.min(prev + 1, sources.length - 1));
+  };
+
+  const handleBook = () => {
+    dispatch(selectCar(car));
+    navigate("/booking");
   };
 
   return (
@@ -43,6 +54,9 @@ function CarCard({ car }: CarCardProps) {
       <p className="car-price">
         ৳{car.pricePerDay} <small>/ day</small>
       </p>
+      <button className="btn btn-brand car-book" onClick={handleBook}>
+        Book now
+      </button>
     </article>
   );
 }

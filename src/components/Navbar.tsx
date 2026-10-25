@@ -1,8 +1,10 @@
 import { NavLink } from "react-router-dom";
 import { useTheme } from "../context/useTheme";
+import { useAppSelector } from "../store/hooks";
 
 function Navbar() {
   const { theme, toggleTheme } = useTheme();
+  const selectedCar = useAppSelector((state) => state.booking.selectedCar);
 
   return (
     <header className="navbar">
@@ -21,6 +23,12 @@ function Navbar() {
           </li>
           <li>
             <NavLink to="/faq">FAQ</NavLink>
+          </li>
+          <li>
+            <NavLink to="/booking">
+              Booking
+              {selectedCar && <span className="nav-dot" />}
+            </NavLink>
           </li>
         </ul>
       </nav>

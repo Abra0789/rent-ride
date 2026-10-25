@@ -4,13 +4,15 @@ import type { Car } from "../types";
 
 interface BookingState {
   selectedCar: Car | null;
-  days: number;
+  pickupDate: string | null;
+  returnDate: string | null;
   insurance: boolean;
 }
 
 const initialState: BookingState = {
   selectedCar: null,
-  days: 1,
+  pickupDate: null,
+  returnDate: null,
   insurance: true,
 };
 
@@ -21,8 +23,15 @@ const bookingSlice = createSlice({
     selectCar(state, action: PayloadAction<Car>) {
       state.selectedCar = action.payload;
     },
-    setDays(state, action: PayloadAction<number>) {
-      state.days = Math.max(1, action.payload);
+    setDates(
+      state,
+      action: PayloadAction<{
+        pickupDate: string | null;
+        returnDate: string | null;
+      }>
+    ) {
+      state.pickupDate = action.payload.pickupDate;
+      state.returnDate = action.payload.returnDate;
     },
     toggleInsurance(state) {
       state.insurance = !state.insurance;
@@ -33,6 +42,6 @@ const bookingSlice = createSlice({
   },
 });
 
-export const { selectCar, setDays, toggleInsurance, resetBooking } =
+export const { selectCar, setDates, toggleInsurance, resetBooking } =
   bookingSlice.actions;
 export default bookingSlice.reducer;

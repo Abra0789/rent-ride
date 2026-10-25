@@ -22,13 +22,13 @@ function Navbar() {
             <NavLink to="/fleet">Our Fleet</NavLink>
           </li>
           <li>
-            <NavLink to="/faq">FAQ</NavLink>
-          </li>
-          <li>
             <NavLink to="/booking">
               Booking
               {selectedCar && <span className="nav-dot" />}
             </NavLink>
+          </li>
+          <li>
+            <NavLink to="/faq">FAQ</NavLink>
           </li>
         </ul>
       </nav>
